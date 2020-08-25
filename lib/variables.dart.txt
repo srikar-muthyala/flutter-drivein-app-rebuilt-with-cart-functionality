@@ -1,0 +1,17 @@
+import 'package:flutter_testapp/product_model.dart';
+
+List<ProductModel> cart = [];
+int total_price = 0;
+int total_items = 0;
+List<String> imageUrl = [
+  'assets/images/banana.PNG',
+  'assets/images/melon.PNG',
+  'assets/images/neworange.PNG',
+  'assets/images/pineapple.PNG',
+  'assets/images/empty.PNG',
+  'assets/images/apple_jist.png',
+  'assets/images/iced_tea.png',
+  'assets/images/orangej.png',
+  'assets/images/strawj.png',
+];
+
