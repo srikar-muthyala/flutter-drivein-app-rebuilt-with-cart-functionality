@@ -550,11 +550,15 @@ class _drinkScreenState extends State<drinkScreen> {
                   Positioned(
                     bottom: 30,
                     left: 20,
-                    child: Text(drinks[0].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold
-                    ),),
+                    child: Container(
+                      height: 35,
+                      width: 130,
+                      child: Text(drinks[0].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
                   ),
                   Positioned(
                     bottom: 10,
