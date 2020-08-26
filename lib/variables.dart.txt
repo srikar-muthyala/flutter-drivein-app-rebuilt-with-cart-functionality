@@ -13,5 +13,13 @@ List<String> imageUrl = [
   'assets/images/iced_tea.png',
   'assets/images/orangej.png',
   'assets/images/strawj.png',
+  'assets/images/veg_pizza.png',
+  'assets/images/margherita.png',
+  'assets/images/extra_vaga.png',
+  'assets/images/double_cheese.png',
+  'assets/images/milk_bread.png',
+  'assets/images/white_bread.png',
+  'assets/images/atta.png',
+  'assets/images/amulcheese.png',
 ];
 

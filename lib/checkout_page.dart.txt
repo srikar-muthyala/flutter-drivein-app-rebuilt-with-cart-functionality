@@ -61,6 +61,14 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                 cart[index].name == 'Apple Zist'?imageUrl[5] :
                                 cart[index].name== 'Orange Juice'?imageUrl[7] :
                                 cart[index].name== 'Iced Tea'?imageUrl[6] :
+                                cart[index].name== 'Veg Fiesta Pizza'?imageUrl[9] :
+                                cart[index].name== 'Margherita Pizza'?imageUrl[10] :
+                                cart[index].name== 'Veg Extravaganza Pizza'?imageUrl[11] :
+                                cart[index].name== 'Double Cheese Margherita Pizza'?imageUrl[12] :
+                                cart[index].name== 'Milk Bread'?imageUrl[13] :
+                                cart[index].name== 'Wheat Bread'?imageUrl[14] :
+                                cart[index].name== 'Aashirvad aata 5kg'?imageUrl[15] :
+                                cart[index].name== 'Cheese slices 10 pcs'?imageUrl[16] :
                                 imageUrl[4]),
                             ),
                           ),
@@ -74,6 +82,13 @@ class _CheckoutPageState extends State<CheckoutPage> {
                         ),
                         Text(cart[index].price.toString()),
                         GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              total_price -= cart[index].price;
+                              cart.removeAt(index);
+                              total_items -= 1;
+                            });
+                          },
                             child: Icon(Icons.delete)
                         )
                       ],
@@ -112,7 +127,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   Positioned(
                     top: 10,
                     right: 50,
-                    child: Text((total_price + 70).toString() + '/-', style: TextStyle(
+                    child: Text( total_price>0 ? (total_price + 70).toString() + '/-': '0 /-', style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -142,15 +157,24 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   Positioned(
                     bottom: 20,
                     right: 20,
-                    child: Container(
-                      height: 45,
-                      width: 110,
-                      color: Colors.white,
-                      child: Center(
-                        child: Text(total_price.toString(), style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 25
-                        ),),
+                    child: GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          total_price = 0;
+                          total_items = 0;
+                          cart = [];
+                        });
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 110,
+                        color: Colors.white,
+                        child: Center(
+                          child: Text('Rs ' + total_price.toString() +'/-', style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 25
+                          ),),
+                        ),
                       ),
                     ),
                   ),
