@@ -200,152 +200,158 @@ class _fruitScreenState extends State<fruitScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xffFFD401),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xffFFD401),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
                     ),
-                    height: 170,
-                  ),
-                  Positioned(
-                    bottom: 100,
-                    right: 28,
-                    child: GestureDetector(
-                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => BananaPage())),
-                        child: Hero(
-                          tag: 'flutterLogo',
-                            child: Image.asset('assets/images/banana.PNG', scale: 1.3,),
-                        ),
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(fruits[0].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                      bottom: 10,
-                      left: 20,
-                      child: Text(fruits[0].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(fruits[0]);
-                          total_items ++;
-                          total_price += fruits[0].price;
-
-                        });
-                      },
-                      child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
+                    Positioned(
+                      bottom: 100,
+                      right: 28,
+                      child: GestureDetector(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => BananaPage())),
+                          child: Hero(
+                            tag: 'flutterLogo',
+                              child: Image.asset('assets/images/banana.PNG', scale: 1.3,),
                           ),
                       ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(fruits[0].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Positioned(
+                        bottom: 10,
+                        left: 20,
+                        child: Text(fruits[0].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(fruits[0]);
+                            total_items ++;
+                            total_price += fruits[0].price;
 
-                ],
+                          });
+                        },
+                        child: Container(
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xffFEC4AE),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xffFEC4AE),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
+
                     ),
-                    height: 170,
+                    Positioned(
+                      bottom: 100,
+                      right: 28,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MelonPage())),
+                          child: Hero(
+                              tag: 'melonIcon',
+                              child: Image.asset('assets/images/melon.PNG', scale: 1.3,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(fruits[1].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(fruits[1].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(fruits[1]);
+                            total_items ++;
+                            total_price += fruits[1].price;
 
-                  ),
-                  Positioned(
-                    bottom: 100,
-                    right: 28,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MelonPage())),
-                        child: Hero(
-                            tag: 'melonIcon',
-                            child: Image.asset('assets/images/melon.PNG', scale: 1.3,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(fruits[1].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(fruits[1].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(fruits[1]);
-                          total_items ++;
-                          total_price += fruits[1].price;
+                          });
+                        },
+                        child: Container(
 
-                        });
-                      },
-                      child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
 
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
                             ),
-                          )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
             ),
           ],
@@ -354,148 +360,154 @@ class _fruitScreenState extends State<fruitScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff00F597),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff00F597),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
+
                     ),
-                    height: 170,
+                    Positioned(
+                      bottom: 100,
+                      right: 28,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OrangePage())),
+                          child: Hero(
+                            tag: 'orangeIcon',
+                              child: Image.asset('assets/images/neworange.PNG', scale: 1.3,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(fruits[2].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(fruits[2].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(fruits[2]);
+                            total_items ++;
+                            total_price += fruits[2].price;
+                          });
+                        },
+                        child: Container(
 
-                  ),
-                  Positioned(
-                    bottom: 100,
-                    right: 28,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OrangePage())),
-                        child: Hero(
-                          tag: 'orangeIcon',
-                            child: Image.asset('assets/images/neworange.PNG', scale: 1.3,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(fruits[2].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(fruits[2].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(fruits[2]);
-                          total_items ++;
-                          total_price += fruits[2].price;
-                        });
-                      },
-                      child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
 
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
                             ),
-                          )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff02DEFE),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff02DEFE),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
+
                     ),
-                    height: 170,
+                    Positioned(
+                      bottom: 100,
+                      right: 28,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => PineapplePage())),
+                          child: Hero(
+                              tag: 'pineIcon',
+                              child: Image.asset('assets/images/pineapple.PNG', scale: 1.3,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(fruits[3].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(fruits[3].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(fruits[3]);
+                            total_items ++;
+                            total_price += fruits[3].price;
+                          });
+                        },
+                        child: Container(
 
-                  ),
-                  Positioned(
-                    bottom: 100,
-                    right: 28,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => PineapplePage())),
-                        child: Hero(
-                            tag: 'pineIcon',
-                            child: Image.asset('assets/images/pineapple.PNG', scale: 1.3,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(fruits[3].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(fruits[3].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(fruits[3]);
-                          total_items ++;
-                          total_price += fruits[3].price;
-                        });
-                      },
-                      child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
 
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
                             ),
-                          )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
             ),
           ],
@@ -559,152 +571,158 @@ class _drinkScreenState extends State<drinkScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xffd52f1d),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xffd52f1d),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
                     ),
-                    height: 170,
-                  ),
-                  Positioned(
-                    bottom: 60,
-                    right: 28,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => StrawberryPage())),
-                        child: Hero(
-                            tag: 'strawberryIcon',
-                            child: Image.asset('assets/images/strawj.png', scale: 2,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Container(
-                      height: 35,
-                      width: 130,
-                      child: Text(drinks[0].name, style: TextStyle(
+                    Positioned(
+                      bottom: 60,
+                      right: 28,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => StrawberryPage())),
+                          child: Hero(
+                              tag: 'strawberryIcon',
+                              child: Image.asset('assets/images/strawj.png', scale: 2,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Container(
+                        height: 35,
+                        width: 130,
+                        child: Text(drinks[0].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(drinks[0].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(drinks[0]);
+                            total_items ++;
+                            total_price += drinks[0].price;
+
+                          });
+                        },
+                        child: Container(
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
+
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xfff3780e),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
+
+                    ),
+                    Positioned(
+                      bottom: 70,
+                      right: 28,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ApplePage())),
+                          child: Hero(
+                              tag: 'appleIcon',
+                              child: Image.asset('assets/images/apple_jist.png', scale: 2,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(drinks[1].name, style: TextStyle(
                           color: Colors.black87,
-                          fontSize: 15.0,
+                          fontSize: 20.0,
                           fontWeight: FontWeight.bold
                       ),),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(drinks[0].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(drinks[0]);
-                          total_items ++;
-                          total_price += drinks[0].price;
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(drinks[1].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(drinks[1]);
+                            total_items ++;
+                            total_price += drinks[1].price;
+                          });
+                        },
+                        child: Container(
 
-                        });
-                      },
-                      child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
 
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
                             ),
-                          )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                     ),
-                  ),
 
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
-
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xfff3780e),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
-
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    right: 28,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ApplePage())),
-                        child: Hero(
-                            tag: 'appleIcon',
-                            child: Image.asset('assets/images/apple_jist.png', scale: 2,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(drinks[1].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(drinks[1].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(drinks[1]);
-                          total_items ++;
-                          total_price += drinks[1].price;
-                        });
-                      },
-                      child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
-                    ),
-                  ),
-
-                ],
+                  ],
+                ),
               ),
             ),
           ],
@@ -713,148 +731,154 @@ class _drinkScreenState extends State<drinkScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xfffcbb3d),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xfffcbb3d),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
+
                     ),
-                    height: 170,
+                    Positioned(
+                      bottom: 70,
+                      right: 28,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OrangeJuicePage())),
+                          child: Hero(
+                            tag: 'orangeJuiceIcon',
+                              child: Image.asset('assets/images/orangej.png', scale: 2,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(drinks[2].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(drinks[2].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(drinks[2]);
+                            total_items ++;
+                            total_price += drinks[2].price;
+                          });
+                        },
+                        child: Container(
 
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    right: 28,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OrangeJuicePage())),
-                        child: Hero(
-                          tag: 'orangeJuiceIcon',
-                            child: Image.asset('assets/images/orangej.png', scale: 2,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(drinks[2].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(drinks[2].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(drinks[2]);
-                          total_items ++;
-                          total_price += drinks[2].price;
-                        });
-                      },
-                      child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
 
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
                             ),
-                          )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff02DEFE),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff02DEFE),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
+
                     ),
-                    height: 170,
+                    Positioned(
+                      bottom: 80,
+                      right: 15,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => IcedTeaPage())),
+                          child: Hero(
+                              tag: 'icedTeaIcon',
+                              child: Image.asset('assets/images/iced_tea.png', scale: 5,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Text(drinks[3].name, style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(drinks[3].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(drinks[3]);
+                            total_items ++;
+                            total_price += drinks[3].price;
+                          });
+                        },
+                        child: Container(
 
-                  ),
-                  Positioned(
-                    bottom: 80,
-                    right: 15,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => IcedTeaPage())),
-                        child: Hero(
-                            tag: 'icedTeaIcon',
-                            child: Image.asset('assets/images/iced_tea.png', scale: 5,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Text(drinks[3].name, style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(drinks[3].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(drinks[3]);
-                          total_items ++;
-                          total_price += drinks[3].price;
-                        });
-                      },
-                      child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
 
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
                             ),
-                          )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
             ),
           ],
@@ -921,157 +945,163 @@ class _breadPageState extends State<breadPage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xffd52f1d),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xffd52f1d),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
                     ),
-                    height: 170,
-                  ),
-                  Positioned(
-                    bottom: 65,
-                    right: 0,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MargheritaPage())),
-                        child: Hero(
-                            tag: 'margherita',
-                            child: Image.asset('assets/images/margherita.png', scale: 4,))),
-                  ),
-                  Positioned(
-                    bottom: 25,
-                    left: 20,
-                    child: Container(
-                      height: 30,
-                      width: 130,
-                      child: Text(breads[0].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold
-                      ),),
+                    Positioned(
+                      bottom: 65,
+                      right: 0,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MargheritaPage())),
+                          child: Hero(
+                              tag: 'margherita',
+                              child: Image.asset('assets/images/margherita.png', scale: 4,))),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 15,
-                    left: 20,
-                    child: Text(breads[0].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(breads[0]);
-                          total_items ++;
-                          total_price += breads[0].price;
-
-                        });
-                      },
+                    Positioned(
+                      bottom: 25,
+                      left: 20,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 30,
+                        width: 130,
+                        child: Text(breads[0].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 15,
+                      left: 20,
+                      child: Text(breads[0].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(breads[0]);
+                            total_items ++;
+                            total_price += breads[0].price;
 
-                ],
+                          });
+                        },
+                        child: Container(
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xfff3780e),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xfff3780e),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
 
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    left: 10,
-                    right: 0,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DoubleCheesePage())),
-                        child: Hero(
-                            tag: 'doubleCheeseIcon',
-                            child: Image.asset('assets/images/double_cheese.png', scale: 6,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 10,
-                    child: Container(
-                      height: 30,
-                      width: 190,
-                      child: Text(breads[1].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.bold
-                      ),),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(breads[1].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(breads[1]);
-                          total_items ++;
-                          total_price += breads[1].price;
-                        });
-                      },
+                    Positioned(
+                      bottom: 70,
+                      left: 10,
+                      right: 0,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DoubleCheesePage())),
+                          child: Hero(
+                              tag: 'doubleCheeseIcon',
+                              child: Image.asset('assets/images/double_cheese.png', scale: 6,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 10,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 30,
+                        width: 190,
+                        child: Text(breads[1].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(breads[1].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(breads[1]);
+                            total_items ++;
+                            total_price += breads[1].price;
+                          });
+                        },
+                        child: Container(
 
-                ],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
           ],
@@ -1080,157 +1110,163 @@ class _breadPageState extends State<breadPage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xfffcbb3d),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xfffcbb3d),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
 
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    right: 20,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => VegFiestaPage())),
-                        child: Hero(
-                            tag: 'vegFiestaIcon',
-                            child: Image.asset('assets/images/veg_pizza.png', scale: 5,))),
-                  ),
-                  Positioned(
-                    bottom: 25,
-                    left: 20,
-                    child: Container(
-                      height: 30,
-                      width: 160,
-                      child: Text(breads[2].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold
-                      ),),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 15,
-                    left: 20,
-                    child: Text(breads[2].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(breads[2]);
-                          total_items ++;
-                          total_price += breads[2].price;
-                        });
-                      },
+                    Positioned(
+                      bottom: 70,
+                      right: 20,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => VegFiestaPage())),
+                          child: Hero(
+                              tag: 'vegFiestaIcon',
+                              child: Image.asset('assets/images/veg_pizza.png', scale: 5,))),
+                    ),
+                    Positioned(
+                      bottom: 25,
+                      left: 20,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 30,
+                        width: 160,
+                        child: Text(breads[2].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 15,
+                      left: 20,
+                      child: Text(breads[2].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(breads[2]);
+                            total_items ++;
+                            total_price += breads[2].price;
+                          });
+                        },
+                        child: Container(
 
-                ],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff02DEFE),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff02DEFE),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
 
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    left: 1,
-                    right: 0,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ExtravaganzaPage())),
-                        child: Hero(
-                            tag: 'extraVaPizzaIcon',
-                            child: Image.asset('assets/images/extra_vaga.png', scale: 4,))),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Container(
-                      height: 35,
-                      width: 140,
-                      child: Text(breads[3].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.bold
-                      ),),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(breads[3].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(breads[3]);
-                          total_items ++;
-                          total_price += breads[3].price;
-                        });
-                      },
+                    Positioned(
+                      bottom: 70,
+                      left: 1,
+                      right: 0,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ExtravaganzaPage())),
+                          child: Hero(
+                              tag: 'extraVaPizzaIcon',
+                              child: Image.asset('assets/images/extra_vaga.png', scale: 4,))),
+                    ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 35,
+                        width: 140,
+                        child: Text(breads[3].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(breads[3].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(breads[3]);
+                            total_items ++;
+                            total_price += breads[3].price;
+                          });
+                        },
+                        child: Container(
 
-                ],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
           ],
@@ -1279,8 +1315,9 @@ class _groceriesPageState extends State<groceriesPage> {
                         Text(total_items.toString(), style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
-                            fontWeight: FontWeight.w300
-                        ),)
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -1293,156 +1330,162 @@ class _groceriesPageState extends State<groceriesPage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff02DEFE),
-                      borderRadius: BorderRadius.circular(20),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xff02DEFE),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
                     ),
-                    height: 170,
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    right: 5,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MilkBreadPage())),
-                        child: Hero(
-                            tag: 'milkLogo',
-                            child: Image.asset('assets/images/milk_bread.png', scale: 3,))),
-                  ),
-                  Positioned(
-                    bottom: 25,
-                    left: 20,
-                    child: Container(
-                      height: 30,
-                      width: 130,
-                      child: Text(groceries[0].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold
-                      ),),
+                    Positioned(
+                      bottom: 70,
+                      right: 5,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MilkBreadPage())),
+                          child: Hero(
+                              tag: 'milkLogo',
+                              child: Image.asset('assets/images/milk_bread.png', scale: 3,))),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 15,
-                    left: 20,
-                    child: Text(groceries[0].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(groceries[0]);
-                          total_items ++;
-                          total_price += groceries[0].price;
-
-                        });
-                      },
+                    Positioned(
+                      bottom: 25,
+                      left: 20,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 30,
+                        width: 130,
+                        child: Text(groceries[0].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 15,
+                      left: 20,
+                      child: Text(groceries[0].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(groceries[0]);
+                            total_items ++;
+                            total_price += groceries[0].price;
 
-                ],
+                          });
+                        },
+                        child: Container(
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xfff3780e),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xfff3780e),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
 
-                  ),
-                  Positioned(
-                    bottom: 75,
-                    right: 5,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => WheatBreadPage())),
-                        child: Hero(
-                            tag: 'wheatLogo',
-                            child: Image.asset('assets/images/white_bread.png', scale: 3.7,))),
-                  ),
-                  Positioned(
-                    bottom: 25,
-                    left: 20,
-                    child: Container(
-                      height: 30,
-                      width: 190,
-                      child: Text(groceries[1].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold
-                      ),),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 15,
-                    left: 20,
-                    child: Text(groceries[1].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(groceries[1]);
-                          total_items ++;
-                          total_price += groceries[1].price;
-                        });
-                      },
+                    Positioned(
+                      bottom: 75,
+                      right: 5,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => WheatBreadPage())),
+                          child: Hero(
+                              tag: 'wheatLogo',
+                              child: Image.asset('assets/images/white_bread.png', scale: 3.7,))),
+                    ),
+                    Positioned(
+                      bottom: 25,
+                      left: 20,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 30,
+                        width: 190,
+                        child: Text(groceries[1].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 15,
+                      left: 20,
+                      child: Text(groceries[1].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(groceries[1]);
+                            total_items ++;
+                            total_price += groceries[1].price;
+                          });
+                        },
+                        child: Container(
 
-                ],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
           ],
@@ -1451,159 +1494,165 @@ class _groceriesPageState extends State<groceriesPage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xfffcbb3d),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xfffcbb3d),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 170,
 
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    right: 20,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AttaPage())),
-                        child: Hero(
-                            tag: 'attaLogo',
-                            child: Image.asset('assets/images/atta.png', scale: 3,))),
-                  ),
-                  Positioned(
-                    bottom: 25,
-                    left: 20,
-                    child: Container(
-                      height: 30,
-                      width: 160,
-                      child: Text(groceries[2].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold
-                      ),),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 15,
-                    left: 20,
-                    child: Text(groceries[2].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(groceries[2]);
-                          total_items ++;
-                          total_price += groceries[2].price;
-                        });
-                      },
+                    Positioned(
+                      bottom: 70,
+                      right: 20,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AttaPage())),
+                          child: Hero(
+                              tag: 'attaLogo',
+                              child: Image.asset('assets/images/atta.png', scale: 3,))),
+                    ),
+                    Positioned(
+                      bottom: 25,
+                      left: 20,
                       child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        height: 30,
+                        width: 160,
+                        child: Text(groceries[2].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 15,
+                      left: 20,
+                      child: Text(groceries[2].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(groceries[2]);
+                            total_items ++;
+                            total_price += groceries[2].price;
+                          });
+                        },
+                        child: Container(
 
-                ],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 240,
-              width: 180,
+            Card(
+              elevation: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 240,
+                width: 170,
 
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xffFFD401),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 170,
-
-                  ),
-                  Positioned(
-                    bottom: 70,
-                    right: 15,
-                    child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AmulPage())),
-                        child: Hero(
-                            tag: 'amulIcon',
-                            child: Image.asset('assets/images/amulcheese.png', scale: 5,
-                            ),
-                        ),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xffFFD401),
+                        borderRadius: BorderRadius.circular(20),
                       ),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    left: 20,
-                    child: Container(
-                      height: 35,
-                      width: 140,
-                      child: Text(groceries[3].name, style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.bold
-                      ),),
+                      height: 170,
+
                     ),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    left: 20,
-                    child: Text(groceries[3].price.toString() + ' /- each'),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          cart.add(groceries[3]);
-                          total_items ++;
-                          total_price += groceries[3].price;
-                        });
-                      },
-                      child: Container(
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red,
-
+                    Positioned(
+                      bottom: 70,
+                      right: 15,
+                      child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AmulPage())),
+                          child: Hero(
+                              tag: 'amulIcon',
+                              child: Image.asset('assets/images/amulcheese.png', scale: 5,
+                              ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.add,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          )),
+                        ),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 30,
+                      left: 20,
+                      child: Container(
+                        height: 35,
+                        width: 140,
+                        child: Text(groceries[3].name, style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 20,
+                      child: Text(groceries[3].price.toString() + ' /- each'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            cart.add(groceries[3]);
+                            total_items ++;
+                            total_price += groceries[3].price;
+                          });
+                        },
+                        child: Container(
 
-                ],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.add,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
             ),
           ],
