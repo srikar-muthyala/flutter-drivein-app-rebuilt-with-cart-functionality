@@ -1,0 +1,111 @@
+import 'package:flutter/material.dart';
+
+class VegFiestaPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color(0xfffcbb3d),
+      ),
+      body: Column(
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 300,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xfffcbb3d),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 220,
+                child: Hero(
+                  tag: 'vegFiestaIcon',
+                  child: Image.asset('assets/images/veg_pizza.png', scale: 2.5,),
+                ),
+              ),
+
+              Positioned(
+                top: 85,
+                child: Container(
+                  height: 50,
+                  width: 210,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 0),
+                      child: Text('Veg Fiesta Pizza', style: TextStyle(
+                        color: Color(0xfffcbb3d),
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 160,
+                child: Container(
+                  height: 35,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Center(
+                    child: Text('Rs 200/- each', style: TextStyle(
+                      color: Color(0xfffcbb3d),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20, 160, 0),
+            child: Container(
+              height: 250,
+              width: 200,
+              color: Colors.transparent,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('Contains:', style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 23,
+                      color: Colors.black45
+                  ),
+                  ),
+                  Text('High in vitamins, antioxidants and minerals.', style: TextStyle(
+                    color: Colors.black45,
+
+                  ),)
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+
+    );
+  }
+}

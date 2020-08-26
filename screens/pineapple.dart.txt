@@ -1,0 +1,112 @@
+import 'package:flutter/material.dart';
+
+class PineapplePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color(0xff02DEFE),
+      ),
+      body: Column(
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 300,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xff02DEFE),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 10,
+                right: 20,
+                child: Hero(
+                  tag: 'pineIcon',
+                  child: Image.asset('assets/images/pineapple.PNG', scale: 0.8,),
+                ),
+              ),
+
+              Positioned(
+                top: 100,
+                child: Container(
+                  height: 50,
+                  width: 170,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Center(
+                    child: Text('Pineapple', style: TextStyle(
+                      color: Color(0xff02DEFE),
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 160,
+                child: Container(
+                  height: 35,
+                  width: 130,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Center(
+                    child: Text('Rs 60/- each', style: TextStyle(
+                      color: Color(0xff02DEFE),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 160, 0),
+            child: Container(
+              height: 250,
+              width: 240,
+              color: Colors.transparent,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('Contains:', style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 23,
+                      color: Colors.black45
+                  ),
+                  ),
+                  SizedBox(height: 5,),
+                  Text('Source of important vitamins and minerals.', style: TextStyle(
+                    color: Colors.black45,
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('Eating a few slices of fresh pineapple a day can defend your body from harmful free radicals and disease.', style: TextStyle(
+                    color: Colors.black45,
+                  ),),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+
+    );
+  }
+}

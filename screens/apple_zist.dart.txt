@@ -1,0 +1,119 @@
+import 'package:flutter/material.dart';
+
+class ApplePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color(0xfff3780e),
+      ),
+      body: Column(
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 300,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xfff3780e),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Hero(
+                  tag: 'appleIcon',
+                  child: Image.asset('assets/images/apple_jist.png', scale: 1,),
+                ),
+              ),
+
+              Positioned(
+                top: 100,
+                child: Container(
+                  height: 50,
+                  width: 160,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      child: Text('Apple Zist', style: TextStyle(
+                        color: Color(0xfff3780e),
+                        fontSize: 29,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 160,
+                child: Container(
+                  height: 35,
+                  width: 145,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Center(
+                    child: Text('Rs 140/- each', style: TextStyle(
+                      color: Color(0xfff3780e),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 160, 0),
+            child: Container(
+              height: 250,
+              width: 240,
+              color: Colors.transparent,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('Contains:', style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 23,
+                      color: Colors.black45
+                  ),
+                  ),
+                  SizedBox(height: 5,),
+                  Text('Rich strawberry juice.', style: TextStyle(
+                    color: Colors.black45,
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('A slice of lemon.', style: TextStyle(
+                    color: Colors.black45,
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('A lil bit of vodka.', style: TextStyle(
+                    color: Colors.black45,
+                  ),),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+
+    );
+  }
+}
