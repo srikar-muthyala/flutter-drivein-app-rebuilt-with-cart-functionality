@@ -80,9 +80,9 @@ class AmulPage extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 20, 160, 0),
+            padding: const EdgeInsets.fromLTRB(10, 20, 160, 0),
             child: Container(
-              height: 250,
+              height: 200,
               width: 200,
               color: Colors.transparent,
               child: Column(
