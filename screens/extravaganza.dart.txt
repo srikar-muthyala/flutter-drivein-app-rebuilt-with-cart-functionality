@@ -24,8 +24,8 @@ class ExtravaganzaPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 0,
-                left: 220,
+                bottom: 20,
+                left: 200,
                 child: Hero(
                   tag: 'extraVaPizzaIcon',
                   child: Image.asset('assets/images/extra_vaga.png', scale: 2.5,),
@@ -80,9 +80,9 @@ class ExtravaganzaPage extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 20, 160, 0),
+            padding: const EdgeInsets.fromLTRB(10, 20, 160, 0),
             child: Container(
-              height: 250,
+              height: 200,
               width: 200,
               color: Colors.transparent,
               child: Column(
