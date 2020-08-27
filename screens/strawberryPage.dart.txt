@@ -25,7 +25,8 @@ class StrawberryPage extends StatelessWidget {
               ),
               Positioned(
                 bottom: 0,
-                right: 20,
+//                right: 0,
+                left: 150,
                 child: Hero(
                   tag: 'strawberryIcon',
                   child: Image.asset('assets/images/strawj.png', scale: 1.1,),
@@ -82,7 +83,7 @@ class StrawberryPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 20, 160, 0),
             child: Container(
-              height: 250,
+              height: 200,
               width: 240,
               color: Colors.transparent,
               child: Column(
