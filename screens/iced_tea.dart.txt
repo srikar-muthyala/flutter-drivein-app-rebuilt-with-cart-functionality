@@ -25,7 +25,7 @@ class IcedTeaPage extends StatelessWidget {
               ),
               Positioned(
                 bottom: 10,
-                left: 130,
+                left: 150,
                 child: Hero(
                   tag: 'icedTeaIcon',
                   child: Image.asset('assets/images/iced_tea.png', scale: 2.5,),
@@ -82,7 +82,7 @@ class IcedTeaPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 20, 160, 0),
             child: Container(
-              height: 250,
+              height: 200,
               width: 240,
               color: Colors.transparent,
               child: Column(
